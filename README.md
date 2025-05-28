@@ -1,64 +1,37 @@
-# 🔥 URP炎シェーダーデモ - HLSL × Emission × ノイズゆらぎ
+# URP Fire Shader Demo
 
-![デモGIF](Docs/flame.gif)
+UnityのURPとHLSLを用いた、簡易的な炎エフェクトシェーダーのデモです。EmissionやUVノイズ、歪み表現を活用し、揺らめく炎を表現しています。
 
-Unity URP + HLSL を使用して作成したリアルタイム炎エフェクトのデモプロジェクトです。  
-ノイズによる揺らぎ表現とUV歪みで自然な動きを演出し、Emission × Bloomでリアルな発光を再現しています。
+## 🎮 実演デモ
 
----
+[WebGLデモはこちら](https://tkagawa218.itch.io/urp-fire-shader-webgl-demo)
 
-## 🎯 使用技術
+※現在、一部ブラウザでピンクの四角のみ表示される不具合があります。詳細は「今後の課題」セクションをご参照ください。
 
-- Unity 6.x
-- URP（Universal Render Pipeline）
-- HLSL（手書きカスタムシェーダー）
-- Emission Map × Emission Color × Emission Intensity
-- Gradient Noise（Legacy方式）
-- Radial Shear（UV歪みによる上昇表現）
+## 🔧 構成
 
----
+- URP向けのHLSLカスタムシェーダー
+- ノイズ生成 + UVアニメーションによる動き
+- Emissionマップによる発光制御
+- マテリアル制御によるインスペクタ調整
 
-## 🔍 特徴
+## 📂 使用方法
 
-- ノイズによるゆらぎとUV歪みによる炎の自然な動き
-- Emission + Bloom を活用したリアルなGlow表現
-- アルファ値による滑らかなフェードアウト
-- シンプルな構成で再利用しやすいShader設計
+1. Unity 2022.3 以降でプロジェクトを開く
+2. URPアセットとRendererを Graphics/Quality に設定
+3. `FireWithEmission.shader` を任意のマテリアルに適用
+4. デモシーンを開いて再生
 
----
+## ⚠ 今後の課題・改善予定
 
-## 🚀 セットアップ方法
+- WebGL上でのピンク表示（Fallback Shader表示）
+  - `Hidden/InternalErrorShader` が参照される問題
+  - 原因：Render Pipeline設定 / Shaderターゲット互換性の問題
+- 対応予定：
+  - Shader Graph版への移行
+  - Shader Model 2.0 準拠の軽量版
+  - HDR/Bloomを省いたWebGL特化Renderer構成
 
-1. Unity 6.0 以降のバージョンで本リポジトリをクローン
-2. `Assets/FireShader/Scenes/DemoScene.unity` を開く
-3. `Project Settings > Graphics` から URP アセットが正しく設定されていることを確認
-4. 再生ボタンで炎エフェクトを確認できます
+## 📜 ライセンス
 
----
-
-## 📂 フォルダ構成
-Assets/
-└── FireShader/
-├── Shaders/ // HLSLシェーダー本体
-├── Materials/ // 使用するマテリアル
-├── Scenes/ // デモシーン
-└── Textures/ // ノイズ・エミッション画像など
-Docs/
-└── flame.gif // 実演GIF
-
----
-
-## 💡 今後の追加予定（ToDo）
-
-- Flow Noise による炎のさらなる自然表現
-- カスタムマスク対応
-- Shader Graph版の併用例
-- WebGLデモの公開
-
----
-
-## 📄 ライセンス
-
-このプロジェクトは MIT ライセンスの下で公開されています。  
-詳細は [LICENSE](LICENSE) ファイルをご確認ください。
-
+MITライセンス。自由に改変・商用利用可能です。
