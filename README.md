@@ -4,6 +4,8 @@ UnityのURPとHLSLを用いた、簡易的な炎エフェクトシェーダー�
 
 ## 🎮 実演デモ
 
+![デモGIF](Docs/flame.gif)
+
 [WebGLデモはこちら](https://tkagawa218.itch.io/urp-fire-shader-webgl-demo)
 
 ※現在、一部ブラウザでピンクの四角のみ表示される不具合があります。詳細は「今後の課題」セクションをご参照ください。
