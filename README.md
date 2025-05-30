@@ -3,6 +3,7 @@
 UnityのURPとHLSLを用いた、簡易的な炎エフェクトシェーダーのデモです。EmissionやUVノイズ、歪み表現を活用し、揺らめく炎を表現しています。
 
 ## 🎮 実演デモ
+![デモGIF](Docs/flame.gif)
 
 [WebGLデモはこちら](https://tkagawa218.itch.io/urp-fire-shader-webgl-demo)
 
