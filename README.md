@@ -37,6 +37,8 @@ UnityのURPとHLSLを用いた、簡易的な炎エフェクトシェーダー�
 
 MITライセンス。自由に改変・商用利用可能です。
 
+✉  Mall:   [Adress](tkagawa218@gmail.com)  
+
 ## 📘 関連記事
 
 - [Zenn記事を読む（炎シェーダ制作記録）](https://zenn.dev/tkagawa/articles/6674b906b93dd2)
